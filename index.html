@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <title>TreeFrog Tools</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+    
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://redeye.treefrog.tools/" target="_blank">
+            <img src="./images/treefrog.png" alt="Hover Image" class="hover-image" id="centerImage">
+        </a>
+    </div>
+
+    <script>
+        const centerImage = document.getElementById('centerImage');
+        const body = document.body;
+        const originalColor = body.style.backgroundColor || "#f0f0f0";
+        
+        // Since we can't directly select pseudo-elements with JavaScript,
+        // we'll use a class toggle approach instead
+        
+        // Add a class to body when hovering over the image
+        centerImage.addEventListener('mouseenter', () => {
+            document.body.classList.add('show-background');
+        });
+        
+        // Remove the class when not hovering
+        centerImage.addEventListener('mouseleave', () => {
+            document.body.classList.remove('show-background');
+        });
+    </script>
+</body>
+</html>
